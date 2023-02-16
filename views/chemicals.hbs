@@ -1,0 +1,12 @@
+<h1>{{title}}</h1>
+{{>navbar}}
+{{#if prediction}}
+    <p> <b>Mixing:</b> {{fibonum}} </p>
+     <p>  <a href="{{precipitate_URL}}"> {{precipitate}} </a> will precipitate out of solution due to solubility and leave <a href="{{solute_URL}}">{{solute_salt}}</a> in solution.</p>
+    <hr/>
+{{/if}}
+<p>Enter sum chemicals!</p>
+<form name ='chemical' action ='/chemical' method="get">
+<input type ='text' name='fibonum' />
+<input type ='submit' value='Submit' />
+</form>
