@@ -14,6 +14,7 @@ const app = express();
 const indexRouter = require('./routes/index');
 const chemical= require('./routes/chemicals');
 const breeds = require('./routes/breeds');
+const images = require('./routes/images');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/chemical', chemical);
 app.use('/breeds', breeds);
+app.use('/images', images);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
