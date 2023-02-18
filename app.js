@@ -12,7 +12,6 @@ const app = express();
 
 
 const indexRouter = require('./routes/index');
-const chemical= require('./routes/chemicals');
 const breeds = require('./routes/breeds');
 const images = require('./routes/images');
 
@@ -28,7 +27,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/chemical', chemical);
 app.use('/breeds', breeds);
 app.use('/images', images);
 
