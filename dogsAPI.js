@@ -1,39 +1,13 @@
-/* async function fetchMoviesJSON() {
-    const response = await fetch('https://dog.ceo/api/breed/hound/images');
+ async function fetchMoviesJSON() {
+    const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m');
     const movies = await response.json();
-    return movies.message;
+    return movies;
   }
  
-  let dog_json;
-//   fetchMoviesJSON().then(movies => {
-//     movies; // fetched movies
-//     //console.log(movies);
-//     dog_json = movies;
-//     console.log(Object.keys(dog_json));
-//   });
-
-dog_json = await fetchMoviesJSON();
-
-
-
-console.log(dog_json.slice(1,10)); */
-
-//get the images from the dog api
-async function fetchimagesJSON(url_2_fetch) {
-  const response = await fetch(url_2_fetch);
-  const images = await response.json();
-  return images.message;
-}
-
-
-let breed = 'affenpinscher';
-
-fetch_url_str = `https://dog.ceo/api/breed/${breed}/images`;
-fetchimagesJSON(fetch_url_str).then(images => {
-    images; // fetched images
-    //console.log(images)
-    dog_json = images;
-    image_list = dog_json.slice(1,10);
-    console.log(image_list);
-
-});
+  //let dog_json;
+  fetchMoviesJSON().then(movies => {
+   movies; // fetched movies
+     console.log(movies);
+     //dog_json = movies;
+     //onsole.log(Object.keys(dog_json));
+   });

@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
             images; // fetched images
             //console.log(images)
             dog_json = images;
-            image_list = dog_json.slice(1, 5);
+            image_list = dog_json.slice(1, 20);
             console.log(image_list);
             res.render('images', {
                 title: req.query.breed,
